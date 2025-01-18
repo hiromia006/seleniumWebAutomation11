@@ -10,6 +10,7 @@ public class LaunchBrowser {
         driver.get("https://mvnrepository.com/");
 
         System.out.println(driver.getCurrentUrl());
+        System.out.println(driver.getTitle());
 
 
         driver.quit();
