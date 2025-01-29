@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
-public class TabTest {
+public class WindowTest {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();
@@ -19,7 +19,7 @@ public class TabTest {
         //Store the ID of the original window
         String originalWindow = driver.getWindowHandle();
 
-        driver.switchTo().newWindow(WindowType.TAB);
+        driver.switchTo().newWindow(WindowType.WINDOW);
         driver.navigate().to("https://demoqa.com/sample");
         System.out.println("New Tab "+driver.findElement(By.id("sampleHeading")).getText());
         Thread.sleep(3000);
