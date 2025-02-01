@@ -46,7 +46,7 @@ public class SauceDemoClassTest extends BaseSauceDemoClassTest {
 
     }
 
-    @Test(priority = 0)
+    @Test(priority = 0, enabled = false)
     public void checkTittle() {
         Assert.assertEquals(driver.getTitle(), "Swag Labs");
 

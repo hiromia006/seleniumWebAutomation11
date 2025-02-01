@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="This Suite will be run Test Cases according class">
+        <classes>
+            <class name="testngClass.LoginTest"></class>
+            <class name="testngClass.SauceDemoClassTest"></class>
+            <class name="testngClass.SauceDemoMethodTest"></class>
+        </classes>
+    </test>
+</suite>
