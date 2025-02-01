@@ -6,10 +6,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest {
+public class SauceDemoTest {
 
     @Test
-    public void login() throws InterruptedException {
+    public void login1() throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
@@ -73,7 +73,7 @@ public class LoginTest {
         driver.quit();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void checkUrl() {
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();

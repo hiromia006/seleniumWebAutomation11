@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 public class BaseSauceDemoMethodTest {
-    WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeMethod
     public void browserSetup() {

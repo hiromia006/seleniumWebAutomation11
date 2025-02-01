@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import java.time.Duration;
 
 public class BaseSauceDemoClassTest {
-    WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeClass
     public void browserSetup() {

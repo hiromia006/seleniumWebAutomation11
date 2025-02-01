@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class SauceDemoMethodTest extends BaseSauceDemoMethodTest {
     @Test(enabled = false)
-    public void login() throws InterruptedException {
+    public void login2() throws InterruptedException {
         driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");
         driver.findElement(By.cssSelector("#password")).sendKeys("secret_sauce");
 
@@ -17,7 +17,7 @@ public class SauceDemoMethodTest extends BaseSauceDemoMethodTest {
 
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void loginFailWithoutUsername() throws InterruptedException {
         driver.findElement(By.cssSelector("#password")).clear();
         driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");

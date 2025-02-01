@@ -5,8 +5,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SauceDemoClassTest extends BaseSauceDemoClassTest {
-    @Test(priority = 5)
-    public void login() throws InterruptedException {
+    @Test(priority = 5, groups = "smoke")
+    public void login3() throws InterruptedException {
         driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");
         driver.findElement(By.cssSelector("#password")).sendKeys("secret_sauce");
 
