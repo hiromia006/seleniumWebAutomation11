@@ -8,19 +8,23 @@ import org.testng.annotations.BeforeClass;
 import java.time.Duration;
 
 public class BaseSauceDemoClassTest {
-    public static WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeClass
     public void browserSetup() {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+        if (driver == null) { // Ensure driver is initialized
+            driver = new FirefoxDriver();
+            driver.manage().window().maximize();
+            driver.get("https://www.saucedemo.com/");
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        }
     }
 
     @AfterClass
     public void closeBrowser() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+            driver = null; // Reset to avoid stale WebDriver
+        }
     }
 }

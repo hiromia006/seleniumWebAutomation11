@@ -2,13 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="Group">
-       <groups>
-           <run>
-               <include name="smoke"></include>
-           </run>
-       </groups>
-        <packages>
-            <package name="testngClass.*"></package>
-        </packages>
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="testngClass.SauceDemoMethodTest"></class>
+            <class name="testngClass.SauceDemoClassTest"></class>
+            <class name="testngClass.SauceDemoTest"></class>
+        </classes>
     </test>
 </suite>
